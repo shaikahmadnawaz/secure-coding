@@ -59,8 +59,7 @@ public class OneTimePad {
         // Running for loop for each character
         // subtracting and storing in the array
         for (int i = 0; i < key.length(); i++) {
-            plain[i] = s.charAt(i) - 'A'
-                    - (key.charAt(i) - 'A');
+            plain[i] = s.charAt(i) - 'A' - (key.charAt(i) - 'A');
         }
 
         // If the difference is less than 0
@@ -97,8 +96,7 @@ public class OneTimePad {
         String encryptedText = stringEncryption(plainText.toUpperCase(), key.toUpperCase());
 
         // Printing cipher Text
-        System.out.println("Cipher Text - "
-                + encryptedText);
+        System.out.println("Cipher Text - " + encryptedText);
 
         // Calling above method to stringDecryption
         // with encryptedText and key as parameters
