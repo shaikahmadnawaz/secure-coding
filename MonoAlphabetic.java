@@ -5,14 +5,11 @@ public class MonoAlphabetic {
     public static char ch[] = { 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O',
             'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M' };
     static String str;
-    public static String doEncryption(String s)
-    {
-        char c[] = new char[(s.length())]; for (int i = 0; i < s.length(); i++)
-        {
-            for (int j = 0; j < 26; j++)
-            {
-                if (p[j] == s.charAt(i))
-                {
+    public static String doEncryption(String s) {
+        char c[] = new char[(s.length())];
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < 26; j++) {
+                if (p[j] == s.charAt(i)) {
                     c[i] = ch[j]; break;
                 }
             }
@@ -20,12 +17,9 @@ public class MonoAlphabetic {
         return (new String(c));
     }
     public static String doDecryption(String s) {
-        char p1[] = new char[(s.length())]; for (int i = 0; i < s.length(); i++)
-        {
-            for (int j = 0; j < 26; j++)
-            {
-                if (ch[j] == s.charAt(i))
-                {
+        char p1[] = new char[(s.length())]; for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < 26; j++) {
+                if (ch[j] == s.charAt(i)) {
                     p1[i] = p[j]; break;
                 }
             }
