@@ -8,9 +8,7 @@ public class OneTimePad {
 
     // Method 1
     // Returning encrypted text
-    public static String stringEncryption(String text,
-                                          String key)
-    {
+    public static String stringEncryption(String text, String key) {
 
         // Initializing cipherText
         String cipherText = "";
@@ -21,9 +19,7 @@ public class OneTimePad {
         int cipher[] = new int[key.length()];
 
         for (int i = 0; i < key.length(); i++) {
-            cipher[i] = text.charAt(i) - 'A'
-                    + key.charAt(i)
-                    - 'A';
+            cipher[i] = text.charAt(i) - 'A' + key.charAt(i) - 'A';
         }
 
         // If the sum is greater than 25
@@ -41,7 +37,7 @@ public class OneTimePad {
         // characters and add them up to cipherText
         for (int i = 0; i < key.length(); i++) {
             int x = cipher[i] + 'A';
-            cipherText += (char)x;
+            cipherText += (char) x;
         }
 
         // Returning the cipherText
@@ -50,9 +46,7 @@ public class OneTimePad {
 
     // Method 2
     // Returning plain text
-    public static String stringDecryption(String s,
-                                          String key)
-    {
+    public static String stringDecryption(String s, String key) {
         // Initializing plain text
         String plainText = "";
 
@@ -65,8 +59,7 @@ public class OneTimePad {
         // Running for loop for each character
         // subtracting and storing in the array
         for (int i = 0; i < key.length(); i++) {
-            plain[i]
-                    = s.charAt(i) - 'A'
+            plain[i] = s.charAt(i) - 'A'
                     - (key.charAt(i) - 'A');
         }
 
@@ -82,7 +75,7 @@ public class OneTimePad {
         // add them up to plainText
         for (int i = 0; i < key.length(); i++) {
             int x = plain[i] + 'A';
-            plainText += (char)x;
+            plainText += (char) x;
         }
 
         // Returning plainText
@@ -91,8 +84,7 @@ public class OneTimePad {
 
     // Method 3
     // Main driver method
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Declaring plain text
         String plainText = "Hello";
 
@@ -102,8 +94,7 @@ public class OneTimePad {
         // Converting plain text to toUpperCase
         // function call to stringEncryption
         // with plainText and key as parameters
-        String encryptedText = stringEncryption(
-                plainText.toUpperCase(), key.toUpperCase());
+        String encryptedText = stringEncryption(plainText.toUpperCase(), key.toUpperCase());
 
         // Printing cipher Text
         System.out.println("Cipher Text - "
@@ -111,9 +102,6 @@ public class OneTimePad {
 
         // Calling above method to stringDecryption
         // with encryptedText and key as parameters
-        System.out.println(
-                "Message - "
-                        + stringDecryption(encryptedText,
-                        key.toUpperCase()));
+        System.out.println("Message - " + stringDecryption(encryptedText, key.toUpperCase()));
     }
 }
