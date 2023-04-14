@@ -18,10 +18,12 @@ public class MonoAlphabetic {
         return (new String(c));
     }
     public static String doDecryption(String s) {
-        char p1[] = new char[(s.length())]; for (int i = 0; i < s.length(); i++) {
+        char p1[] = new char[(s.length())];
+        for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < 26; j++) {
                 if (ch[j] == s.charAt(i)) {
-                    p1[i] = p[j]; break;
+                    p1[i] = p[j];
+                    break;
                 }
             }
         }
