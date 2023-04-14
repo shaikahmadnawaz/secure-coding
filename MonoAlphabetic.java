@@ -10,7 +10,8 @@ public class MonoAlphabetic {
         for (int i = 0; i < s.length(); i++) {
             for (int j = 0; j < 26; j++) {
                 if (p[j] == s.charAt(i)) {
-                    c[i] = ch[j]; break;
+                    c[i] = ch[j];
+                    break;
                 }
             }
         }
